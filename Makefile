@@ -5,7 +5,7 @@
 COMPILER = mpif90
 FLAGS = -O3 # this is an optimizer which makes loops more efficient
 # LINK = -L/home/harshit/packages/lib -llapack -lblas
-EXECUTABLE = sccMmatNew.exe
+EXECUTABLE = sccMobility.exe
 # Object Files for build
 OBJS = \
 container_mod.o \
@@ -17,8 +17,8 @@ global_mod.o
 
 # The commands must be exactly one ‘‘tab’’ over
 
-$(EXECUTABLE) : sccMmatNew.f90 $(OBJS)
-	$(COMPILER) $(FLAGS) -o $(EXECUTABLE) sccMmatNew.f90 $(OBJS)
+$(EXECUTABLE) : sccMobility.f90 $(OBJS)
+	$(COMPILER) $(FLAGS) -o $(EXECUTABLE) sccMobility.f90 $(OBJS)
 
 # Generic object dependencies and compilation
 %.o : %.f90 
